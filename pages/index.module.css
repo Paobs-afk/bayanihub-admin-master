@@ -161,26 +161,22 @@
   flex: 1;
 }
 
-.quickCardIcon {
-  width: 4rem;
-  height: 4rem;
+.quickCardIconBox {
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 0.75rem;
-  background-color: #1F2937;
+  flex-shrink: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 
-.quickCardImage {
-  width: 5rem;
-  height: 5rem;
+.quickCardIconBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  object-fit: contain;
 }
 
 .quickCardTitle {
