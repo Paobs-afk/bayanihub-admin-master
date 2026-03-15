@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import styles from "./applicant.module.css";
 
 // Mock applicant data - detailed profiles
 const APPLICANT_DATABASE: { [key: string]: any } = {
@@ -68,14 +69,14 @@ export default function ApplicantDetail() {
 
   if (!applicant) {
     return (
-      <div className="min-h-screen flex flex-col bg-[#FAFAFA]">
+      <div className={styles.notFound}>
         <Header />
-        <main className="flex-1 flex items-center justify-center">
-          <div className="text-center">
-            <p className="text-[#737373] text-lg mb-4">Applicant not found</p>
+        <main className={styles.notFoundContent}>
+          <div>
+            <p className={styles.notFoundText}>Applicant not found</p>
             <button
               onClick={() => router.push("/volunteers")}
-              className="px-4 py-2 bg-[#5C6ED5] text-white rounded-lg hover:bg-[#3E5A99] transition-colors"
+              className={styles.notFoundButton}
             >
               Back to Volunteers
             </button>
@@ -91,62 +92,51 @@ export default function ApplicantDetail() {
     setTimeout(() => setIsSaved(false), 2000);
   };
 
-  const getRoleColor = (role: string) => {
-    const colors: { [key: string]: { bg: string; text: string } } = {
-      Medic: { bg: "bg-[#5C6ED5]/10", text: "text-[#5C6ED5]" },
-      Logistic: { bg: "bg-[#3E5A99]/10", text: "text-[#3E5A99]" },
-      Field: { bg: "bg-[#5C6ED5]/5", text: "text-[#5C6ED5]" },
-    };
-    return colors[role] || { bg: "bg-gray-100", text: "text-[#5C6ED5]" };
-  };
-
-  const roleColor = getRoleColor(applicant.role);
-
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAFAFA]">
+    <div className={styles.container}>
       <Header />
 
-      <main className="flex-1 w-full max-w-[1890px] mx-auto px-5 sm:px-10 lg:px-8 py-8 flex flex-col gap-6">
+      <main className={styles.main}>
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-[#737373]">
-          <Link href="/volunteers" className="hover:text-[#5C6ED5] transition-colors">
+        <div className={styles.breadcrumb}>
+          <Link href="/volunteers" className={styles.breadcrumbLink}>
             Applications
           </Link>
           <span>/</span>
-          <Link href="/volunteers" className="hover:text-[#5C6ED5] transition-colors">
+          <Link href="/volunteers" className={styles.breadcrumbLink}>
             Volunteer Applications
           </Link>
           <span>/</span>
-          <span className="text-[#171717] font-medium">{applicant.name}</span>
+          <span className={styles.breadcrumbActive}>{applicant.name}</span>
         </div>
 
         {/* Applicant Header */}
-        <div className="bg-white border border-[#E5E5E5] rounded-lg p-6 hover:shadow-lg transition-shadow">
-          <div className="flex items-start justify-between gap-6 flex-col sm:flex-row">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#5C6ED5]/10 to-[#3E5A99]/10 rounded-full flex items-center justify-center text-4xl flex-shrink-0">
+        <div className={styles.applicantHeader}>
+          <div className={styles.headerContent}>
+            <div className={styles.applicantInfo}>
+              <div className={styles.applicantAvatar}>
                 {applicant.avatar}
               </div>
               <div>
-                <h1 className="text-[#171717] text-2xl font-semibold mb-1">{applicant.name}</h1>
-                <p className="text-[#737373] text-sm mb-2">{applicant.title}</p>
-                <p className="text-[#737373] text-xs">Applied on {applicant.appliedDate}</p>
+                <h1 className={styles.applicantName}>{applicant.name}</h1>
+                <p className={styles.applicantTitle}>{applicant.title}</p>
+                <p className={styles.applicantDate}>Applied on {applicant.appliedDate}</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 flex-wrap sm:flex-nowrap">
-              <span className={`px-3 py-1 rounded-full text-sm font-semibold ${roleColor.bg} ${roleColor.text} whitespace-nowrap`}>
+            <div className={styles.headerActions}>
+              <span className={`${styles.statusBadge} ${styles.statusUnderReview}`}>
                 {applicant.status}
               </span>
               <button
                 onClick={() => router.push("/approval-status")}
-                className="px-4 py-2 bg-[#5C6ED5] text-white rounded-lg text-sm font-medium hover:bg-[#3E5A99] transition-colors whitespace-nowrap"
+                className={styles.approveButton}
               >
                 Approve
               </button>
               <button
                 onClick={() => router.push("/rejection-status")}
-                className="px-4 py-2 border border-[#E5E5E5] rounded-lg text-sm font-medium text-[#171717] hover:bg-[#FAFAFA] hover:text-[#5C6ED5] transition-colors whitespace-nowrap"
+                className={styles.rejectButton}
               >
                 Reject
               </button>
@@ -155,80 +145,80 @@ export default function ApplicantDetail() {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className={styles.gridLayout}>
           {/* Left Column */}
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className={styles.mainColumn}>
             {/* Personal Information */}
-            <div className="bg-white border border-[#E5E5E5] rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-[#171717] font-semibold text-lg mb-4">Personal Information</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="text-[#737373] text-xs font-semibold uppercase mb-1 block">Email</label>
-                  <p className="text-[#171717] text-sm">{applicant.personal.email}</p>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>Personal Information</h2>
+              <div className={styles.infoGrid}>
+                <div className={styles.infoItem}>
+                  <label className={styles.infoLabel}>Email</label>
+                  <p className={styles.infoValue}>{applicant.personal.email}</p>
                 </div>
-                <div>
-                  <label className="text-[#737373] text-xs font-semibold uppercase mb-1 block">Phone</label>
-                  <p className="text-[#171717] text-sm">{applicant.personal.phone}</p>
+                <div className={styles.infoItem}>
+                  <label className={styles.infoLabel}>Phone</label>
+                  <p className={styles.infoValue}>{applicant.personal.phone}</p>
                 </div>
-                <div>
-                  <label className="text-[#737373] text-xs font-semibold uppercase mb-1 block">Address</label>
-                  <p className="text-[#171717] text-sm">{applicant.personal.address}</p>
+                <div className={styles.infoItem}>
+                  <label className={styles.infoLabel}>Address</label>
+                  <p className={styles.infoValue}>{applicant.personal.address}</p>
                 </div>
-                <div>
-                  <label className="text-[#737373] text-xs font-semibold uppercase mb-1 block">Emergency Contact</label>
-                  <p className="text-[#171717] text-sm">{applicant.personal.emergencyContact}</p>
+                <div className={styles.infoItem}>
+                  <label className={styles.infoLabel}>Emergency Contact</label>
+                  <p className={styles.infoValue}>{applicant.personal.emergencyContact}</p>
                 </div>
               </div>
             </div>
 
             {/* Experience & Skills */}
-            <div className="bg-white border border-[#E5E5E5] rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-[#171717] font-semibold text-lg mb-4">Experience & Skills</h2>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>Experience & Skills</h2>
 
-              <div className="mb-6">
-                <h3 className="text-[#171717] font-semibold text-sm mb-2">{applicant.experience.title}</h3>
-                <p className="text-[#525252] text-sm mb-4">{applicant.experience.description}</p>
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>{applicant.experience.title}</h3>
+                <p className={styles.sectionDescription}>{applicant.experience.description}</p>
               </div>
 
-              <div className="mb-6">
-                <h3 className="text-[#171717] font-semibold text-sm mb-3">Relevant Skills</h3>
-                <div className="flex flex-wrap gap-2">
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>Relevant Skills</h3>
+                <div className={styles.skillsList}>
                   {applicant.experience.skills.map((skill, idx) => (
-                    <span key={idx} className="px-3 py-1 bg-[#F5F5F5] text-[#171717] text-xs font-medium rounded-full border border-[#E5E5E5] hover:border-[#5C6ED5] transition-colors">
+                    <span key={idx} className={styles.skillTag}>
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-[#171717] font-semibold text-sm mb-2">Motivation</h3>
-                <p className="text-[#525252] text-sm">{applicant.experience.motivation}</p>
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>Motivation</h3>
+                <p className={styles.sectionDescription}>{applicant.experience.motivation}</p>
               </div>
             </div>
 
             {/* Uploaded Documents */}
-            <div className="bg-white border border-[#E5E5E5] rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-[#171717] font-semibold text-lg mb-4">Uploaded Documents</h2>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>Uploaded Documents</h2>
 
-              <div className="space-y-3 mb-4">
+              <div className={styles.documentsList}>
                 {applicant.documents.map((doc, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-3 border border-[#E5E5E5] rounded-lg hover:bg-[#FAFAFA] hover:border-[#5C6ED5] transition-colors">
-                    <div className="flex items-center gap-3">
-                      <span className="text-xl">{doc.icon}</span>
-                      <div>
-                        <p className="text-[#171717] text-sm font-medium">{doc.name}</p>
-                        <p className="text-[#737373] text-xs">{doc.size} • Uploaded {doc.date}</p>
+                  <div key={idx} className={styles.documentItem}>
+                    <div className={styles.documentInfo}>
+                      <span className={styles.documentIcon}>{doc.icon}</span>
+                      <div className={styles.documentMeta}>
+                        <p className={styles.documentName}>{doc.name}</p>
+                        <p className={styles.documentSize}>{doc.size} • Uploaded {doc.date}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <button className="p-1 text-[#737373] hover:text-[#5C6ED5] transition-colors" title="View">
+                    <div className={styles.documentActions}>
+                      <button className={styles.documentButton} title="View">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                           <circle cx="12" cy="12" r="3" />
                         </svg>
                       </button>
-                      <button className="p-1 text-[#737373] hover:text-[#5C6ED5] transition-colors" title="Download">
+                      <button className={styles.documentButton} title="Download">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                           <polyline points="7 10 12 15 17 10" />
@@ -240,7 +230,7 @@ export default function ApplicantDetail() {
                 ))}
               </div>
 
-              <button className="flex items-center gap-2 text-[#525252] text-sm font-medium hover:text-[#5C6ED5] transition-colors">
+              <button className={styles.downloadAllButton}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                   <polyline points="7 10 12 15 17 10" />
@@ -252,23 +242,23 @@ export default function ApplicantDetail() {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col gap-6">
+          <div className={styles.sidebar}>
             {/* Application Timeline */}
-            <div className="bg-white border border-[#E5E5E5] rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-[#171717] font-semibold text-lg mb-4">Application Timeline</h2>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>Application Timeline</h2>
 
-              <div className="space-y-4">
+              <div className={styles.timeline}>
                 {applicant.timeline.map((item, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <div className="flex flex-col items-center">
-                      <div className={`w-3 h-3 rounded-full ${item.pending ? "bg-[#E5E5E5]" : "bg-[#5C6ED5]"}`} />
-                      {idx < applicant.timeline.length - 1 && <div className="w-0.5 h-8 bg-[#E5E5E5] my-1" />}
+                  <div key={idx} className={styles.timelineItem}>
+                    <div className={styles.timelineMarker}>
+                      <div className={`${styles.timelineDot} ${item.pending ? styles.timelineDotPending : ""}`} />
+                      {idx < applicant.timeline.length - 1 && <div className={styles.timelineLine} />}
                     </div>
-                    <div>
-                      <p className={`text-sm font-medium ${item.pending ? "text-[#737373]" : "text-[#171717]"}`}>
+                    <div className={styles.timelineContent}>
+                      <p className={`${styles.timelineEvent} ${item.pending ? styles.timelineEventPending : ""}`}>
                         {item.event}
                       </p>
-                      <p className="text-[#737373] text-xs">{item.date}</p>
+                      <p className={styles.timelineDate}>{item.date}</p>
                     </div>
                   </div>
                 ))}
@@ -276,40 +266,40 @@ export default function ApplicantDetail() {
             </div>
 
             {/* References */}
-            <div className="bg-white border border-[#E5E5E5] rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-[#171717] font-semibold text-lg mb-4">References</h2>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>References</h2>
 
-              <div className="space-y-4">
+              <div className={styles.referencesList}>
                 {applicant.references.map((ref, idx) => (
-                  <div key={idx} className="pb-4 border-b border-[#E5E5E5] last:border-b-0 hover:text-[#5C6ED5] transition-colors">
-                    <p className="text-[#171717] font-medium text-sm hover:text-[#5C6ED5]">{ref.name}</p>
-                    <p className="text-[#737373] text-xs mb-1">{ref.title}</p>
-                    <p className="text-[#525252] text-xs hover:text-[#5C6ED5]">{ref.phone}</p>
+                  <div key={idx} className={styles.referenceItem}>
+                    <p className={styles.referenceName}>{ref.name}</p>
+                    <p className={styles.referenceTitle}>{ref.title}</p>
+                    <p className={styles.referencePhone}>{ref.phone}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Internal Notes */}
-            <div className="bg-white border border-[#E5E5E5] rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-[#171717] font-semibold text-lg mb-4">Internal Notes</h2>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>Internal Notes</h2>
 
-              <textarea
-                value={notes}
-                onChange={(e) => setNotes(e.target.value)}
-                placeholder="Add notes about this applicant..."
-                className="w-full px-3 py-2 border border-[#E5E5E5] rounded-lg text-sm focus:outline-none focus:border-[#5C6ED5] focus:ring-1 focus:ring-[#5C6ED5] resize-none"
-                rows={4}
-              />
+              <div className={styles.notesSection}>
+                <textarea
+                  value={notes}
+                  onChange={(e) => setNotes(e.target.value)}
+                  placeholder="Add notes about this applicant..."
+                  className={styles.notesTextarea}
+                  rows={4}
+                />
 
-              <button
-                onClick={handleSaveNotes}
-                className={`w-full mt-4 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  isSaved ? "bg-[#5C6ED5] text-white" : "bg-[#5C6ED5] text-white hover:bg-[#3E5A99]"
-                }`}
-              >
-                {isSaved ? "✓ Saved" : "Save Notes"}
-              </button>
+                <button
+                  onClick={handleSaveNotes}
+                  className={`${styles.notesButton} ${isSaved ? styles.saved : ""}`}
+                >
+                  {isSaved ? "✓ Saved" : "Save Notes"}
+                </button>
+              </div>
             </div>
           </div>
         </div>
