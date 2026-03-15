@@ -15,6 +15,7 @@ import Inventory from "./pages/Inventory";
 import ApprovalStatus from "./pages/ApprovalStatus";
 import RejectionStatus from "./pages/RejectionStatus";
 import RejectedApplicationDetail from "./pages/RejectedApplicationDetail";
+import VolunteerVerification from "./pages/VolunteerVerification";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/approval-status" element={<ApprovalStatus />} />
           <Route path="/rejection-status" element={<RejectionStatus />} />
+          <Route path="/volunteer-verification" element={<VolunteerVerification />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
