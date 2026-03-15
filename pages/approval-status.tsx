@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Check, Mail, Download } from "lucide-react";
 import styles from "./approval-status.module.css";
 
 export default function ApprovalStatus() {
@@ -40,7 +39,9 @@ export default function ApprovalStatus() {
         {/* Success Icon */}
         <div className={styles.iconContainer}>
           <div className={styles.successCircle}>
-            <Check className={styles.successIcon} />
+            <svg className={styles.successIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
           </div>
         </div>
 
@@ -98,11 +99,18 @@ export default function ApprovalStatus() {
         {/* Action Buttons */}
         <div className={styles.buttonGrid}>
           <button className={styles.buttonPrimary}>
-            <Mail className="w-5 h-5" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
             Check Email
           </button>
           <button className={styles.buttonSecondary}>
-            <Download className="w-5 h-5" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
             Download Certificate
           </button>
         </div>

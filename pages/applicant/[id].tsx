@@ -58,6 +58,57 @@ const APPLICANT_DATABASE: { [key: string]: any } = {
     ],
     notes: "",
   },
+  "3": {
+    id: 3,
+    name: "Emily Rodriguez",
+    title: "Education & Community Support Volunteer",
+    role: "Educator",
+    appliedDate: "March 18, 2025",
+    status: "Under Review",
+    avatar: "👩‍🏫",
+    gender: "female",
+    personal: {
+      email: "emily.rodriguez@email.com",
+      phone: "(555) 234-5678",
+      address: "456 Oak Ave, City, State 12345",
+      emergencyContact: "Carlos Rodriguez - (555) 876-5432",
+    },
+    experience: {
+      title: "Previous Volunteer Experience",
+      description: "5 years of tutoring experience, community education workshops facilitator, mentorship program lead, fluent in English and Spanish",
+      skills: ["Teaching", "Tutoring", "Mentorship", "Community Engagement", "Bilingual (Spanish)"],
+      motivation: "Education is a powerful tool for change. I believe every young person deserves access to quality mentorship and educational support. Through volunteering, I want to help bridge educational gaps and inspire the next generation.",
+    },
+    documents: [
+      { name: "Resume_Emily_Rodriguez.pdf", size: "2.4 MB", date: "Mar 18, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F5f9ce991089f4cff860e5dbd32a874a8?format=webp&width=800&height=1200" },
+      { name: "Cover_Letter.docx", size: "1.2 MB", date: "Mar 18, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F8caa1a33fbbc4ce8ac590911bc38401c?format=webp&width=800&height=1200" },
+      { name: "Background_Check_Certificate.pdf", size: "920 KB", date: "Mar 18, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F33801296e59f43b882fed63d553eaf9b?format=webp&width=800&height=1200" },
+      { name: "ID_Photo.jpg", size: "1.6 MB", date: "Mar 18, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Fd8b10940354b4d7493d32b06eb2371e9?format=webp&width=800&height=1200" },
+    ],
+    timeline: [
+      { event: "Application Submitted", date: "Mar 18, 2025 at 3:15 PM", pending: false },
+      { event: "Under Review", date: "Mar 18, 2025 at 10:30 AM", pending: false },
+      { event: "References Check", date: "Pending", pending: true },
+    ],
+    references: [
+      {
+        name: "Dr. James Wilson",
+        title: "Education Program Director",
+        phone: "(555) 567-8901",
+      },
+      {
+        name: "Patricia Martinez",
+        title: "Community Center Coordinator",
+        phone: "(555) 678-9012",
+      },
+      {
+        name: "Michael Zhang",
+        title: "Tutoring Service Manager",
+        phone: "(555) 789-0123",
+      },
+    ],
+    notes: "",
+  },
 };
 
 export default function ApplicantDetail() {

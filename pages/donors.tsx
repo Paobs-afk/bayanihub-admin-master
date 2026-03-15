@@ -6,18 +6,18 @@ import styles from "./donors.module.css";
 
 // Mock donor data
 const MOCK_DONORS = [
-  { id: 1, name: "Michael Johnson", bloodType: "A+", location: "New York, NY", appliedDate: "03-15-2024", phone: "(555) 123-4567" },
-  { id: 2, name: "Sarah Williams", bloodType: "O-", location: "Los Angeles, CA", appliedDate: "02-28-2024", phone: "(555) 987-6543" },
-  { id: 3, name: "David Chen", bloodType: "B+", location: "Chicago, IL", appliedDate: "03-22-2024", phone: "(555) 456-7890" },
-  { id: 4, name: "Emily Rodriguez", bloodType: "AB+", location: "Houston, TX", appliedDate: "01-18-2024", phone: "(555) 234-5678" },
-  { id: 5, name: "James Wilson", bloodType: "O+", location: "Phoenix, AZ", appliedDate: "03-10-2024", phone: "(555) 345-6789" },
-  { id: 6, name: "Lisa Thompson", bloodType: "A-", location: "Philadelphia, PA", appliedDate: "02-14-2024", phone: "(555) 567-8901" },
-  { id: 7, name: "Robert Martinez", bloodType: "B-", location: "San Antonio, TX", appliedDate: "03-05-2024", phone: "(555) 678-9012" },
-  { id: 8, name: "Amanda Davis", bloodType: "AB-", location: "San Diego, CA", appliedDate: "01-25-2024", phone: "(555) 789-0123" },
+  { id: 1, name: "Michael Johnson", bloodType: "A+", location: "Pasig City", appliedDate: "03-15-2024", phone: "(555) 123-4567" },
+  { id: 2, name: "Sarah Williams", bloodType: "O-", location: "Quezon City", appliedDate: "02-28-2024", phone: "(555) 987-6543" },
+  { id: 3, name: "David Chen", bloodType: "B+", location: "Makati City", appliedDate: "03-22-2024", phone: "(555) 456-7890" },
+  { id: 4, name: "Emily Rodriguez", bloodType: "AB+", location: "San Juan City", appliedDate: "01-18-2024", phone: "(555) 234-5678" },
+  { id: 5, name: "James Wilson", bloodType: "O+", location: "Mandaluyong City", appliedDate: "03-10-2024", phone: "(555) 345-6789" },
+  { id: 6, name: "Lisa Thompson", bloodType: "A-", location: "Caloocan City", appliedDate: "02-14-2024", phone: "(555) 567-8901" },
+  { id: 7, name: "Robert Martinez", bloodType: "B-", location: "Taguig City", appliedDate: "03-05-2024", phone: "(555) 678-9012" },
+  { id: 8, name: "Amanda Davis", bloodType: "AB-", location: "Manila City", appliedDate: "01-25-2024", phone: "(555) 789-0123" },
 ];
 
 const BLOOD_TYPES = ["All Blood Types", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
-const CITIES = ["All Cities", "New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX", "Phoenix, AZ", "Philadelphia, PA", "San Antonio, TX", "San Diego, CA"];
+const CITIES = ["All Cities", "Pasig City", "Quezon City", "Makati City", "San Juan City", "Mandaluyong City", "Caloocan City", "Taguig City", "Manila City"];
 
 const BLOOD_TYPE_COLORS: { [key: string]: { bg: string; text: string } } = {
   "A+": { bg: "#FEE2E2", text: "#991B1B" },
