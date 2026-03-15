@@ -63,6 +63,33 @@
   }
 }
 
+/* Header Table */
+.headerTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.headerTableCell {
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.headerTable tr:first-child td {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.headerTable tr:last-child td {
+  border-radius: 0 0 0.5rem 0.5rem;
+  min-height: 2rem;
+}
+
 .pageTitle {
   color: #171717;
   font-size: 1.875rem;

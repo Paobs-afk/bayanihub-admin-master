@@ -111,14 +111,23 @@ export default function RejectedApplicationReview() {
           <span className={styles.breadcrumbActive}>Application Review</span>
         </div>
 
-        {/* Page Header */}
-        <div className={styles.pageHeader}>
-          <h1 className={styles.pageTitle}>Application Rejected</h1>
-          <div className={styles.statusBadge}>
-            <div className={styles.statusDot}></div>
-            Status: Rejected
-          </div>
-        </div>
+        {/* Page Header Table */}
+        <table className={styles.headerTable}>
+          <tbody>
+            <tr>
+              <td className={styles.headerTableCell}>
+                <h1 className={styles.pageTitle}>Application Rejected</h1>
+                <div className={styles.statusBadge}>
+                  <div className={styles.statusDot}></div>
+                  Status: Rejected
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td className={styles.headerTableCell}></td>
+            </tr>
+          </tbody>
+        </table>
 
         {/* Alert Box */}
         <div className={styles.alertBox}>
