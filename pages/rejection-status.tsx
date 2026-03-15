@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { X, AlertTriangle } from "lucide-react";
 import styles from "./rejection-status.module.css";
 
 export default function RejectionStatus() {
@@ -45,7 +44,10 @@ export default function RejectionStatus() {
         {/* Rejection Icon */}
         <div className={styles.iconContainer}>
           <div className={styles.rejectionCircle}>
-            <X className={styles.rejectionIcon} />
+            <svg className={styles.rejectionIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
           </div>
         </div>
 
@@ -78,7 +80,11 @@ export default function RejectionStatus() {
         {/* Rejection Reason */}
         <div className={styles.card}>
           <div className={styles.reasonHeader}>
-            <AlertTriangle className={styles.reasonIcon} />
+            <svg className={styles.reasonIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3.05h16.94a2 2 0 0 0 1.71-3.05L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
             <h2 className={styles.reasonTitle}>{rejectionReason.title}</h2>
           </div>
           <p className={styles.reasonText}>{rejectionReason.description}</p>
@@ -103,7 +109,11 @@ export default function RejectionStatus() {
         {/* Important Notice */}
         <div className={styles.noticeBox}>
           <div className={styles.noticeHeader}>
-            <AlertTriangle className={styles.noticeIcon} />
+            <svg className={styles.noticeIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3.05h16.94a2 2 0 0 0 1.71-3.05L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
             <div className={styles.noticeContent}>
               <p className={styles.noticeTitle}>Important Notice</p>
               <p className={styles.noticeText}>
