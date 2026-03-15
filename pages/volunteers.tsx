@@ -300,9 +300,9 @@ export default function Volunteers() {
           {/* Statistics */}
           <div className={styles.statsGrid}>
             <StatCard label="Total Pending" value={counts.total.toString()} />
-            <StatCard label="Medic" value={counts.medic.toString()} icon="👨‍⚕️" />
-            <StatCard label="Logistic" value={counts.logistic.toString()} icon="📦" />
-            <StatCard label="Field" value={counts.field.toString()} icon="🏃" />
+            <StatCard label="Medic" value={counts.medic.toString()} />
+            <StatCard label="Logistic" value={counts.logistic.toString()} />
+            <StatCard label="Field" value={counts.field.toString()} />
           </div>
         </div>
 
