@@ -33,7 +33,7 @@ const BLOOD_TYPE_COLORS: { [key: string]: { bg: string; text: string } } = {
 function BloodTypeBadge({ bloodType }: { bloodType: string }) {
   const color = BLOOD_TYPE_COLORS[bloodType] || { bg: "rgba(92, 110, 213, 0.1)", text: "#5C6ED5" };
   return (
-    <span className={styles.bloodTypeBadge} style={{ backgroundColor: color.bg, color: color.text }}>
+    <span className={styles.bloodTypeBadge} style={{ color: color.text }}>
       {bloodType}
     </span>
   );
