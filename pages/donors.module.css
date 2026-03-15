@@ -1,0 +1,408 @@
+/* Donors Page Styles */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAFAFA;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    flex-direction: column;
+  }
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #5C6ED5;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  width: fit-content;
+  font-size: 0.875rem;
+}
+
+.backButton:hover {
+  background-color: #3E5A99;
+}
+
+.headerCenter {
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #171717;
+  margin-bottom: 0.25rem;
+}
+
+.headerSubtitle {
+  color: #737373;
+  font-size: 0.875rem;
+}
+
+.headerSpacer {
+  width: fit-content;
+}
+
+/* Filters Section */
+.filtersSection {
+  background-color: white;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.filtersContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .filtersContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.searchContainer {
+  flex: 1;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #737373;
+}
+
+.searchInput {
+  width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #5C6ED5;
+  box-shadow: 0 0 0 3px rgba(92, 110, 213, 0.1);
+}
+
+.filterButtons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #5C6ED5;
+  box-shadow: 0 0 0 3px rgba(92, 110, 213, 0.1);
+}
+
+.actionButtonsGroup {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  padding: 0.5rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #525252;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButton:hover {
+  background-color: #FAFAFA;
+  color: #5C6ED5;
+}
+
+.actionButtonPrimary {
+  padding: 0.5rem 1rem;
+  background-color: #5C6ED5;
+  color: white;
+  border-color: #5C6ED5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actionButtonPrimary:hover {
+  background-color: #3E5A99;
+  border-color: #3E5A99;
+}
+
+.viewIconsGroup {
+  display: flex;
+  gap: 0.25rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+/* Donor Cards Grid */
+.donatorsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .donatorsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .donatorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Donor Card */
+.donorCard {
+  background-color: white;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.donorCard:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.donorCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.donorAvatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(to bottom right, rgba(92, 110, 213, 0.1), rgba(62, 90, 153, 0.1));
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bloodTypeBadge {
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.donorName {
+  color: #171717;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.donorLocation {
+  color: #737373;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.donorApplied {
+  color: #737373;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.donorCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid #E5E5E5;
+}
+
+.donorPhone {
+  color: #525252;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.donorPhone:hover {
+  color: #5C6ED5;
+}
+
+.donorMenuButton {
+  background: none;
+  border: none;
+  color: #DC2626;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.donorMenuButton:hover {
+  color: #991B1B;
+}
+
+/* No Results */
+.noResults {
+  background-color: white;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.noResultsText {
+  color: #737373;
+  font-size: 0.875rem;
+}
+
+/* Pagination */
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paginationInfo {
+  font-size: 0.875rem;
+  color: #737373;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paginationButton {
+  padding: 0.5rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background-color: #FAFAFA;
+  color: #5C6ED5;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationPages {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pageNumber {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid #E5E5E5;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageNumber:hover {
+  background-color: #FAFAFA;
+  color: #5C6ED5;
+}
+
+.pageNumberActive {
+  background-color: #5C6ED5;
+  color: white;
+  border-color: #5C6ED5;
+}
+
+/* SVG Sizing */
+.svg16 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.svg20 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
