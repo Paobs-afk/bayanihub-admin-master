@@ -268,11 +268,7 @@ export default function Volunteers() {
             <button
               key={role}
               onClick={() => {
-                if (role === "All Applications") {
-                  setSelectedRole(role);
-                } else {
-                  router.push(`/volunteers/${role.toLowerCase()}`);
-                }
+                setSelectedRole(role);
                 setCurrentPage(1);
               }}
               className={`${styles.filterButton} ${selectedRole === role ? styles.filterButtonActive : ""}`}
