@@ -170,6 +170,17 @@
   flex-shrink: 0;
 }
 
+.quickCardImage {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
 .quickCardTitle {
   color: #171717;
   font-size: 1.25rem;

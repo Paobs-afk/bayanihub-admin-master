@@ -16,11 +16,11 @@ function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string
   );
 }
 
-function QuickAccessCard({ icon, title, description, buttonLabel, href, lastUpdated }: { icon: React.ReactNode; title: string; description: string; buttonLabel: string; href: string; lastUpdated: string }) {
+function QuickAccessCard({ imageUrl, title, description, buttonLabel, href, lastUpdated }: { imageUrl: string; title: string; description: string; buttonLabel: string; href: string; lastUpdated: string }) {
   return (
     <div className={styles.quickCard}>
       <div className={styles.quickCardContent}>
-        <div className={styles.quickCardIcon}>{icon}</div>
+        <img src={imageUrl} alt={title} className={styles.quickCardImage} />
         <div>
           <h4 className={styles.quickCardTitle}>{title}</h4>
           <p className={styles.quickCardDescription}>{description}</p>
@@ -77,9 +77,9 @@ export default function Index() {
         <section className={styles.quickAccessSection}>
           <h3 className={styles.sectionTitle}>Quick Access</h3>
           <div className={styles.quickAccessGrid}>
-            <QuickAccessCard href="/donors" title="Donor Management" description="View and manage all donor profiles, donations, and contribution history" buttonLabel="Go to Donors" lastUpdated="2 hours ago" icon={<svg width="27" height="24" viewBox="0 0 27 24" fill="none"><path d="M6.9375 3.59062C6.9375 1.60781 8.54531 0 10.5281 0C11.4797 0 12.3938 0.379687 13.0641 1.05L13.5 1.48594L13.9359 1.05C14.6062 0.379687 15.5203 0 16.4719 0C18.4547 0 20.0625 1.60781 20.0625 3.59062C20.0625 4.54219 19.6828 5.45625 19.0125 6.12656L14.1609 10.9734C13.7953 11.3391 13.2 11.3391 12.8344 10.9734L7.9875 6.12656C7.31719 5.45625 6.9375 4.54219 6.9375 3.59062Z" fill="white" /></svg>} />
-            <QuickAccessCard href="/volunteers" title="Volunteer Management" description="Coordinate volunteers, track activities, and manage schedules efficiently" buttonLabel="Go to Volunteers" lastUpdated="5 hours ago" icon={<svg width="30" height="24" viewBox="0 0 30 24" fill="none"><path d="M4.5 6C4.5 4.4087 5.13214 2.88258 6.25736 1.75736C7.38258 0.632141 8.9087 0 10.5 0C12.0913 0 13.6174 0.632141 14.7426 1.75736C15.8679 2.88258 16.5 4.4087 16.5 6C16.5 7.5913 15.8679 9.11742 14.7426 10.2426C13.6174 11.3679 12.0913 12 10.5 12C8.9087 12 7.38258 11.3679 6.25736 10.2426C5.13214 9.11742 4.5 7.5913 4.5 6Z" fill="white" /></svg>} />
-            <QuickAccessCard href="/inventory" title="Inventory Management" description="Monitor stock levels, track items, and manage inventory distribution" buttonLabel="Go to Inventory" lastUpdated="1 hour ago" icon={<svg width="30" height="24" viewBox="0 0 30 24" fill="none"><path d="M0 22.875V8.02964C0 6.80151 0.745313 5.69995 1.88438 5.24526L14.4422 0.224951C14.7984 0.0796387 15.1969 0.0796387 15.5578 0.224951L28.1156 5.24526C29.2547 5.69995 30 6.8062 30 8.02964V22.875C30 23.4984 29.4984 24 28.875 24H26.625C26.0016 24 25.5 23.4984 25.5 22.875V10.5C25.5 9.67026 24.8297 8.99995 24 8.99995H6C5.17031 8.99995 4.5 9.67026 4.5 10.5V22.875C4.5 23.4984 3.99844 24 3.375 24H1.125C0.501562 24 0 23.4984 0 22.875Z" fill="white" /></svg>} />
+            <QuickAccessCard href="/donors" title="Donor Management" description="View and manage all donor profiles, donations, and contribution history" buttonLabel="Go to Donors" lastUpdated="2 hours ago" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F3c6ffe4c2ed0471bb725b7f1adaa3c57?format=webp&width=800&height=1200" />
+            <QuickAccessCard href="/volunteers" title="Volunteer Management" description="Coordinate volunteers, track activities, and manage schedules efficiently" buttonLabel="Go to Volunteers" lastUpdated="5 hours ago" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F03dca035d2ad47b1b707071db21129ac?format=webp&width=800&height=1200" />
+            <QuickAccessCard href="/inventory" title="Inventory Management" description="Monitor stock levels, track items, and manage inventory distribution" buttonLabel="Go to Inventory" lastUpdated="1 hour ago" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F82ecdf71cb684ad4a1c4da1c24bb5be8?format=webp&width=800&height=1200" />
           </div>
         </section>
 
