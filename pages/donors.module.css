@@ -298,14 +298,14 @@
 .donorMenuButton {
   background: none;
   border: none;
-  color: #737373;
+  color: #DC2626;
   cursor: pointer;
   padding: 0.25rem;
   transition: color 0.2s;
 }
 
 .donorMenuButton:hover {
-  color: #5C6ED5;
+  color: #991B1B;
 }
 
 /* No Results */
