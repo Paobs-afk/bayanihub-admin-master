@@ -243,7 +243,16 @@ export default function Volunteers() {
               <h1 className={styles.headerTitle}>Volunteer Applications</h1>
             </div>
           </div>
-          <div className={styles.headerSpacer} />
+          <Link
+            href="/volunteer-verification"
+            className={styles.backButton}
+          >
+            <svg className={styles.svg16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 21H3V3h9V1H3a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-9h-2v9z" />
+              <path d="M23 1H13v2h8.293L5 19.293a1 1 0 0 0 1.414 1.414L22.707 4.414V13h2V1z" />
+            </svg>
+            Verify Volunteers
+          </Link>
         </div>
 
         {/* Application Queue section */}
