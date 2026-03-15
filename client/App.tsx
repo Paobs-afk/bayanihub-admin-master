@@ -14,6 +14,7 @@ import ApplicantDetail from "./pages/ApplicantDetail";
 import Inventory from "./pages/Inventory";
 import ApprovalStatus from "./pages/ApprovalStatus";
 import RejectionStatus from "./pages/RejectionStatus";
+import RejectedApplicationDetail from "./pages/RejectedApplicationDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/volunteers" element={<Volunteers />} />
           <Route path="/volunteers/:role" element={<VolunteerRole />} />
           <Route path="/applicant/:id" element={<ApplicantDetail />} />
+          <Route path="/rejected-applicant/:id" element={<RejectedApplicationDetail />} />
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/approval-status" element={<ApprovalStatus />} />
           <Route path="/rejection-status" element={<RejectionStatus />} />

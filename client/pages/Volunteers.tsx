@@ -13,6 +13,7 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 19, 2025",
     email: "sarah.johnson@email.com",
     phone: "+1 (555) 123-4567",
+    status: "pending",
   },
   {
     id: 2,
@@ -22,6 +23,8 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 14, 2025",
     email: "m.chen@email.com",
     phone: "+1 (555) 987-6543",
+    status: "rejected",
+    rejectionDate: "March 8, 2025",
   },
   {
     id: 3,
@@ -31,6 +34,7 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 13, 2025",
     email: "emily@email.com",
     phone: "+1 (555) 456-7890",
+    status: "pending",
   },
   {
     id: 4,
@@ -40,6 +44,7 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 10, 2025",
     email: "j.wilson@email.com",
     phone: "+1 (555) 234-5678",
+    status: "pending",
   },
   {
     id: 5,
@@ -49,6 +54,8 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 09, 2025",
     email: "lthompson@email.com",
     phone: "+1 (555) 345-6789",
+    status: "rejected",
+    rejectionDate: "March 5, 2025",
   },
   {
     id: 6,
@@ -58,6 +65,7 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 08, 2025",
     email: "rmartinez@email.com",
     phone: "+1 (555) 567-8901",
+    status: "pending",
   },
   {
     id: 7,
@@ -67,6 +75,7 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 07, 2025",
     email: "adavis@email.com",
     phone: "+1 (555) 678-9012",
+    status: "pending",
   },
   {
     id: 8,
@@ -76,6 +85,7 @@ const MOCK_VOLUNTEERS = [
     appliedDate: "Jan 06, 2025",
     email: "dlee@email.com",
     phone: "+1 (555) 789-0123",
+    status: "pending",
   },
 ];
 
@@ -306,7 +316,14 @@ export default function Volunteers() {
                 <ApplicationItem
                   key={volunteer.id}
                   volunteer={volunteer}
-                  onReview={(id) => navigate(`/applicant/${id}`)}
+                  onReview={(id) => {
+                    const vol = MOCK_VOLUNTEERS.find(v => v.id === id);
+                    if (vol?.status === "rejected") {
+                      navigate(`/rejected-applicant/${id}`);
+                    } else {
+                      navigate(`/applicant/${id}`);
+                    }
+                  }}
                   onApprove={() => navigate("/approval-status")}
                   onReject={() => navigate("/rejection-status")}
                 />
