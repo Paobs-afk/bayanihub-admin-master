@@ -298,18 +298,13 @@
 }
 
 .skillTag {
-  padding: 0.35rem 0.75rem;
-  background-color: #f5f5f5;
   color: #171717;
-  font-size: 0.75rem;
-  font-weight: 500;
-  border: 1px solid #e5e5e5;
-  border-radius: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
   transition: all 0.2s;
 }
 
 .skillTag:hover {
-  border-color: #5c6ed5;
   color: #5c6ed5;
 }
 
