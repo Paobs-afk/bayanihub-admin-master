@@ -108,11 +108,18 @@ export default function ApprovalStatus() {
           </button>
         </div>
 
-        {/* Back Button */}
-        <div className="text-center">
+        {/* Back Links */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+          <button
+            onClick={() => navigate("/volunteers")}
+            className="text-[#5C6ED5] font-medium hover:underline"
+          >
+            Back to Volunteer Applications
+          </button>
+          <span className="text-[#E5E5E5]">•</span>
           <button
             onClick={() => navigate("/")}
-            className="text-[#5C6ED5] font-medium hover:underline text-sm"
+            className="text-[#5C6ED5] font-medium hover:underline"
           >
             Back to Dashboard
           </button>
