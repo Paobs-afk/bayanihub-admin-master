@@ -29,10 +29,10 @@ const APPLICANT_DATABASE: { [key: string]: any } = {
       motivation: "I am passionate about giving back to my community and helping those in need. Having grown up in this area, I understand the challenges many families face and want to be part of the solution.",
     },
     documents: [
-      { name: "Resume_Sarah_Johnson.pdf", size: "2.3 MB", date: "Mar 15, 2025", icon: "📄" },
-      { name: "Cover_Letter.docx", size: "1.1 MB", date: "Mar 15, 2025", icon: "📄" },
-      { name: "Background_Check_Certificate.pdf", size: "890 KB", date: "Mar 15, 2025", icon: "🔒" },
-      { name: "ID_Photo.jpg", size: "1.5 MB", date: "Mar 15, 2025", icon: "🖼️" },
+      { name: "Resume_Sarah_Johnson.pdf", size: "2.3 MB", date: "Mar 15, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F5f9ce991089f4cff860e5dbd32a874a8?format=webp&width=800&height=1200" },
+      { name: "Cover_Letter.docx", size: "1.1 MB", date: "Mar 15, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F8caa1a33fbbc4ce8ac590911bc38401c?format=webp&width=800&height=1200" },
+      { name: "Background_Check_Certificate.pdf", size: "890 KB", date: "Mar 15, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F33801296e59f43b882fed63d553eaf9b?format=webp&width=800&height=1200" },
+      { name: "ID_Photo.jpg", size: "1.5 MB", date: "Mar 15, 2025", icon: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Fd8b10940354b4d7493d32b06eb2371e9?format=webp&width=800&height=1200" },
     ],
     timeline: [
       { event: "Application Submitted", date: "Mar 15, 2025 at 2:30 PM", pending: false },
@@ -215,7 +215,7 @@ export default function ApplicantDetail() {
                 {applicant.documents.map((doc, idx) => (
                   <div key={idx} className={styles.documentItem}>
                     <div className={styles.documentInfo}>
-                      <span className={styles.documentIcon}>{doc.icon}</span>
+                      <img src={doc.icon} alt={doc.name} className={styles.documentIcon} />
                       <div className={styles.documentMeta}>
                         <p className={styles.documentName}>{doc.name}</p>
                         <p className={styles.documentSize}>{doc.size} • Uploaded {doc.date}</p>
