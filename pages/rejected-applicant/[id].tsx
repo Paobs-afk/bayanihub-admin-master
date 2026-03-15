@@ -170,11 +170,7 @@ export default function RejectedApplicationReview() {
             <div className={styles.validationItem}>
               <p className={styles.validationLabel}>Action</p>
               <div className={styles.validationContent}>
-                <button
-                  className={`${styles.validationAction} ${styles.validationActionActive}`}
-                >
-                  Reject
-                </button>
+                <span className={styles.validationValue}>Reject</span>
                 <span className={styles.validationValue} style={{ fontSize: "0.75rem" }}>
                   Notify User with FB (No)
                 </span>
