@@ -12,6 +12,7 @@ import Volunteers from "./pages/Volunteers";
 import VolunteerRole from "./pages/VolunteerRole";
 import ApplicantDetail from "./pages/ApplicantDetail";
 import Inventory from "./pages/Inventory";
+import ApprovalStatus from "./pages/ApprovalStatus";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/volunteers/:role" element={<VolunteerRole />} />
           <Route path="/applicant/:id" element={<ApplicantDetail />} />
           <Route path="/inventory" element={<Inventory />} />
+          <Route path="/approval-status" element={<ApprovalStatus />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
