@@ -56,10 +56,15 @@
   text-decoration: none;
 }
 
-.logo {
-  height: 3rem;
-  width: auto;
-  object-fit: contain;
+.logoIconBox {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .logoText {
@@ -120,16 +125,11 @@
 }
 
 .userAvatar {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #5C6ED5, #3E5A99);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 600;
-  font-size: 0.875rem;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .userDetails {
