@@ -16,6 +16,7 @@ const MOCK_VOLUNTEERS = [
     email: "sarah.johnson@email.com",
     phone: "+1 (555) 123-4567",
     status: "pending",
+    gender: "female",
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const MOCK_VOLUNTEERS = [
     phone: "+1 (555) 987-6543",
     status: "rejected",
     rejectionDate: "March 8, 2025",
+    gender: "male",
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ const MOCK_VOLUNTEERS = [
     email: "emily@email.com",
     phone: "+1 (555) 456-7890",
     status: "pending",
+    gender: "female",
   },
   {
     id: 4,
@@ -47,6 +50,7 @@ const MOCK_VOLUNTEERS = [
     email: "j.wilson@email.com",
     phone: "+1 (555) 234-5678",
     status: "pending",
+    gender: "male",
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ const MOCK_VOLUNTEERS = [
     phone: "+1 (555) 345-6789",
     status: "rejected",
     rejectionDate: "March 5, 2025",
+    gender: "female",
   },
   {
     id: 6,
@@ -68,6 +73,7 @@ const MOCK_VOLUNTEERS = [
     email: "rmartinez@email.com",
     phone: "+1 (555) 567-8901",
     status: "pending",
+    gender: "male",
   },
   {
     id: 7,
@@ -78,6 +84,7 @@ const MOCK_VOLUNTEERS = [
     email: "adavis@email.com",
     phone: "+1 (555) 678-9012",
     status: "pending",
+    gender: "female",
   },
   {
     id: 8,
@@ -88,6 +95,7 @@ const MOCK_VOLUNTEERS = [
     email: "dlee@email.com",
     phone: "+1 (555) 789-0123",
     status: "pending",
+    gender: "male",
   },
 ];
 
@@ -123,14 +131,23 @@ function ApplicationItem({
     return colors[role] || { badge: styles.roleBadgeMedic, icon: "👤" };
   };
 
+  const getAvatarImage = (gender: string) => {
+    const femaleUrl = "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Ff9735712ac9445bfa5fc8e23bf5556e0?format=webp&width=800&height=1200";
+    const maleUrl = "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F5b17614135f047edaec8a0a56e56e95c?format=webp&width=800&height=1200";
+    return gender === "female" ? femaleUrl : maleUrl;
+  };
+
   const roleColor = getRoleColor(volunteer.role);
 
   return (
     <div className={styles.applicationItem}>
       <div className={styles.applicationContent}>
-        <div className={styles.applicationAvatar}>
-          {roleColor.icon}
-        </div>
+        <img
+          src={getAvatarImage(volunteer.gender || "male")}
+          alt={volunteer.name}
+          className={styles.applicationAvatar}
+          style={{ objectFit: "contain" }}
+        />
         <div className={styles.applicationInfo}>
           <h3 className={styles.applicationName}>{volunteer.name}</h3>
           <p className={styles.applicationDescription}>{volunteer.description}</p>

@@ -222,7 +222,6 @@
 .applicationAvatar {
   width: 2.5rem;
   height: 2.5rem;
-  background: linear-gradient(to bottom right, rgba(92, 110, 213, 0.15), rgba(62, 90, 153, 0.15));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -231,6 +230,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: #5C6ED5;
+  object-fit: contain;
 }
 
 .applicationInfo {
