@@ -157,9 +157,9 @@ export default function Index() {
         <section className={styles.quickAccessSection}>
           <h3 className={styles.sectionTitle}>Quick Access</h3>
           <div className={styles.quickAccessGrid}>
-            <QuickAccessCard href="/donors" title="Donor Management" description="View and manage all donor profiles, donations, and contribution history" buttonLabel="Go to Donors" lastUpdated="2 hours ago" icon={<DonorMgmtIcon />} />
-            <QuickAccessCard href="/volunteers" title="Volunteer Management" description="Coordinate volunteers, track activities, and manage schedules efficiently" buttonLabel="Go to Volunteers" lastUpdated="5 hours ago" icon={<VolMgmtIcon />} />
-            <QuickAccessCard href="/inventory" title="Inventory Management" description="Monitor stock levels, track items, and manage inventory distribution" buttonLabel="Go to Inventory" lastUpdated="1 hour ago" icon={<InvMgmtIcon />} />
+            <QuickAccessCard href="/donors" title="Donor Management" description="View and manage all donor profiles, donations, and contribution history" buttonLabel="Go to Donors" lastUpdated="2 hours ago" icon={<img src="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F8190f17c28a14ae286e49066e6180c07?format=webp&width=800&height=1200" alt="Donor Management" style={{width:"100%",height:"100%",objectFit:"contain"}} />} />
+            <QuickAccessCard href="/volunteers" title="Volunteer Management" description="Coordinate volunteers, track activities, and manage schedules efficiently" buttonLabel="Go to Volunteers" lastUpdated="5 hours ago" icon={<img src="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F5964804a127d4962a95e64f331076dde?format=webp&width=800&height=1200" alt="Volunteer Management" style={{width:"100%",height:"100%",objectFit:"cover"}} />} />
+            <QuickAccessCard href="/inventory" title="Inventory Management" description="Monitor stock levels, track items, and manage inventory distribution" buttonLabel="Go to Inventory" lastUpdated="1 hour ago" icon={<img src="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Fbea1e19526874c8fbec15087d7d78d91?format=webp&width=800&height=1200" alt="Inventory Management" style={{width:"100%",height:"100%",objectFit:"cover"}} />} />
           </div>
         </section>
 
