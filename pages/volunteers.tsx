@@ -96,8 +96,8 @@ const VOLUNTEER_ROLES = ["All Applications", "Medic", "Logistic", "Field"];
 function StatCard({ label, value, icon }: { label: string; value: string; icon?: string }) {
   return (
     <div className={styles.statCard}>
-      <p className={styles.statLabel}>{label}</p>
       <p className={styles.statValue}>{value}</p>
+      <p className={styles.statLabel}>{label}</p>
       {icon && <p className={styles.statIcon}>{icon}</p>}
     </div>
   );

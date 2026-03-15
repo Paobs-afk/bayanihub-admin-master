@@ -124,17 +124,17 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.statLabel {
-  color: #737373;
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-}
-
 .statValue {
   color: #171717;
   font-size: 1.875rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: #737373;
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .statIcon {
