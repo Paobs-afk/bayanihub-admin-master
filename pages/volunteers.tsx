@@ -137,6 +137,15 @@ function ApplicationItem({
     return gender === "female" ? femaleUrl : maleUrl;
   };
 
+  const getRoleBadgeImage = (role: string) => {
+    const roleImages: { [key: string]: string } = {
+      Medic: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Fa681e75636584033a859b766b8f2d8fd?format=webp&width=800&height=1200",
+      Logistic: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Ffbdca7a4acbd47888aa70e5c104ee236?format=webp&width=800&height=1200",
+      Field: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Fa3c8b6daffb84fc9a6ff74946c06221a?format=webp&width=800&height=1200",
+    };
+    return roleImages[role] || "";
+  };
+
   const roleColor = getRoleColor(volunteer.role);
 
   return (
@@ -179,9 +188,12 @@ function ApplicationItem({
       </div>
 
       <div className={styles.applicationActions}>
-        <span className={`${styles.roleBadge} ${roleColor.badge}`}>
-          {volunteer.role}
-        </span>
+        <img
+          src={getRoleBadgeImage(volunteer.role)}
+          alt={volunteer.role}
+          className={styles.roleBadgeImage}
+          style={{ height: "2rem", objectFit: "contain" }}
+        />
         <button
           onClick={() => onReview(volunteer.id)}
           className={styles.reviewButton}
