@@ -40,10 +40,10 @@ function QuickAccessCard({ imageUrl, title, description, buttonLabel, href, last
   );
 }
 
-function ActivityItem({ icon, title, subtitle, time, isFirst }: { icon: React.ReactNode; title: string; subtitle: string; time: string; isFirst: boolean }) {
+function ActivityItem({ imageUrl, title, subtitle, time, isFirst }: { imageUrl: string; title: string; subtitle: string; time: string; isFirst: boolean }) {
   return (
     <div className={`${styles.activityItem} ${!isFirst ? "border-t border-[#E5E5E5]" : ""}`}>
-      <div className={styles.activityIcon}>{icon}</div>
+      <img src={imageUrl} alt={title} className={styles.activityIcon} />
       <div className={styles.activityContent}>
         <p className={styles.activityTitle}>{title}</p>
         <p className={styles.activitySubtitle}>{subtitle}</p>
@@ -86,9 +86,9 @@ export default function Index() {
         <section className={styles.quickAccessSection}>
           <h3 className={styles.sectionTitle}>Recent Activity</h3>
           <div className={styles.activitySection}>
-            <ActivityItem isFirst={true} title="New donor registered" subtitle="John Smith joined as a donor" time="10 min ago" icon={<svg width="20" height="16" viewBox="0 0 20 16" fill="none"><path d="M3 4C3 2.93913 3.42143 1.92172 4.17157 1.17157C4.92172 0.421427 5.93913 0 7 0C8.06087 0 9.07828 0.421427 9.82843 1.17157C10.5786 1.92172 11 2.93913 11 4C11 5.06087 10.5786 6.07828 9.82843 6.82843C9.07828 7.57857 8.06087 8 7 8C5.93913 8 4.92172 7.57857 4.17157 6.82843C3.42143 6.07828 3 5.06087 3 4Z" fill="#5C6ED5" /></svg>} />
-            <ActivityItem isFirst={false} title="Inventory updated" subtitle="50 new items added to stock" time="1 hour ago" icon={<svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1.58438 1.82812L0 5H6.5V1H2.92812C2.35938 1 1.84063 1.32187 1.58438 1.82812Z" fill="#5C6ED5" /></svg>} />
-            <ActivityItem isFirst={false} title="Volunteer shift scheduled" subtitle="8 volunteers assigned for tomorrow" time="3 hours ago" icon={<svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M4 0C4.55312 0 5 0.446875 5 1V2H9V1C9 0.446875 9.44687 0 10 0C10.5531 0 11 0.446875 11 1V2H12.5C13.3281 2 14 2.67188 14 3.5V5H0V3.5C0 2.67188 0.671875 2 1.5 2H3V1C3 0.446875 3.44688 0 4 0Z" fill="#5C6ED5" /></svg>} />
+            <ActivityItem isFirst={true} title="New donor registered" subtitle="John Smith joined as a donor" time="10 min ago" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Fb9c5fbc1772e4893abea2644f48dbc0e?format=webp&width=800&height=1200" />
+            <ActivityItem isFirst={false} title="Inventory updated" subtitle="50 new items added to stock" time="1 hour ago" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F74ebf05d1bc94dc6b1dcfb36fc876a14?format=webp&width=800&height=1200" />
+            <ActivityItem isFirst={false} title="Volunteer shift scheduled" subtitle="8 volunteers assigned for tomorrow" time="3 hours ago" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Ff51fb2c771664067964cbe0fedf15455?format=webp&width=800&height=1200" />
           </div>
         </section>
       </main>

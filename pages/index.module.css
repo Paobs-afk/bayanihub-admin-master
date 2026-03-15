@@ -287,11 +287,8 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 9999px;
-  background: linear-gradient(135deg, rgba(92, 110, 213, 0.1), rgba(62, 90, 153, 0.1));
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .activityContent {
