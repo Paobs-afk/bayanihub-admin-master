@@ -20,14 +20,14 @@ const BLOOD_TYPES = ["All Blood Types", "A+", "A-", "B+", "B-", "AB+", "AB-", "O
 const CITIES = ["All Cities", "New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX", "Phoenix, AZ", "Philadelphia, PA", "San Antonio, TX", "San Diego, CA"];
 
 const BLOOD_TYPE_COLORS: { [key: string]: { bg: string; text: string } } = {
-  "A+": { bg: "#EFF6FF", text: "#0369A1" },
-  "A-": { bg: "#F0F9FF", text: "#0369A1" },
-  "B+": { bg: "rgba(92, 110, 213, 0.1)", text: "#3E5A99" },
-  "B-": { bg: "rgba(92, 110, 213, 0.05)", text: "#3E5A99" },
-  "AB+": { bg: "rgba(92, 110, 213, 0.2)", text: "#5C6ED5" },
-  "AB-": { bg: "rgba(92, 110, 213, 0.1)", text: "#5C6ED5" },
-  "O+": { bg: "rgba(92, 110, 213, 0.15)", text: "#3E5A99" },
-  "O-": { bg: "rgba(92, 110, 213, 0.05)", text: "#3E5A99" },
+  "A+": { bg: "#FEE2E2", text: "#991B1B" },
+  "A-": { bg: "#FECACA", text: "#7F1D1D" },
+  "B+": { bg: "#DBEAFE", text: "#1E40AF" },
+  "B-": { bg: "#BAE6FD", text: "#0C4A6E" },
+  "AB+": { bg: "#E9D5FF", text: "#6B21A8" },
+  "AB-": { bg: "#F3E8FF", text: "#5B21B6" },
+  "O+": { bg: "#DCFCE7", text: "#166534" },
+  "O-": { bg: "#BBFCD9", text: "#065F46" },
 };
 
 function BloodTypeBadge({ bloodType }: { bloodType: string }) {
