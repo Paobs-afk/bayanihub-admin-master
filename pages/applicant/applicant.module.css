@@ -85,13 +85,9 @@
 .applicantAvatar {
   width: 4rem;
   height: 4rem;
-  background: linear-gradient(to bottom right, rgba(92, 110, 213, 0.15), rgba(62, 90, 153, 0.15));
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  font-size: 2rem;
+  object-fit: contain;
 }
 
 .applicantName {

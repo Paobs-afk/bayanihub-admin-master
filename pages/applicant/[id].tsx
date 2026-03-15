@@ -15,6 +15,7 @@ const APPLICANT_DATABASE: { [key: string]: any } = {
     appliedDate: "March 15, 2025",
     status: "Under Review",
     avatar: "👩‍⚕️",
+    gender: "female",
     personal: {
       email: "sarah.johnson@email.com",
       phone: "(555) 123-4567",
@@ -67,6 +68,12 @@ export default function ApplicantDetail() {
 
   const applicant = id ? APPLICANT_DATABASE[id as string] : null;
 
+  const getAvatarImage = (gender: string) => {
+    const femaleUrl = "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Ff9735712ac9445bfa5fc8e23bf5556e0?format=webp&width=800&height=1200";
+    const maleUrl = "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F5b17614135f047edaec8a0a56e56e95c?format=webp&width=800&height=1200";
+    return gender === "female" ? femaleUrl : maleUrl;
+  };
+
   if (!applicant) {
     return (
       <div className={styles.notFound}>
@@ -114,9 +121,12 @@ export default function ApplicantDetail() {
         <div className={styles.applicantHeader}>
           <div className={styles.headerContent}>
             <div className={styles.applicantInfo}>
-              <div className={styles.applicantAvatar}>
-                {applicant.avatar}
-              </div>
+              <img
+                src={getAvatarImage(applicant.gender || "female")}
+                alt={applicant.name}
+                className={styles.applicantAvatar}
+                style={{ objectFit: "contain" }}
+              />
               <div>
                 <h1 className={styles.applicantName}>{applicant.name}</h1>
                 <p className={styles.applicantTitle}>{applicant.title}</p>
