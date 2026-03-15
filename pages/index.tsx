@@ -158,7 +158,7 @@ export default function Index() {
           <h3 className={styles.sectionTitle}>Quick Access</h3>
           <div className={styles.quickAccessGrid}>
             <QuickAccessCard href="/donors" title="Donor Management" description="View and manage all donor profiles, donations, and contribution history" buttonLabel="Go to Donors" lastUpdated="2 hours ago" icon={<img src="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F8190f17c28a14ae286e49066e6180c07?format=webp&width=800&height=1200" alt="Donor Management" style={{width:"100%",height:"100%",objectFit:"contain"}} />} />
-            <QuickAccessCard href="/volunteers" title="Volunteer Management" description="Coordinate volunteers, track activities, and manage schedules efficiently" buttonLabel="Go to Volunteers" lastUpdated="5 hours ago" icon={<VolMgmtIcon />} />
+            <QuickAccessCard href="/volunteers" title="Volunteer Management" description="Coordinate volunteers, track activities, and manage schedules efficiently" buttonLabel="Go to Volunteers" lastUpdated="5 hours ago" icon={<img src="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F9032da9c92964db4a2a84b53172e6cd3?format=webp&width=800&height=1200" alt="Volunteer Management" style={{width:"100%",height:"100%",objectFit:"cover"}} />} />
             <QuickAccessCard href="/inventory" title="Inventory Management" description="Monitor stock levels, track items, and manage inventory distribution" buttonLabel="Go to Inventory" lastUpdated="1 hour ago" icon={<InvMgmtIcon />} />
           </div>
         </section>
