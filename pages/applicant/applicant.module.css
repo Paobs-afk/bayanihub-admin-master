@@ -398,14 +398,17 @@
   color: #525252;
   font-size: 0.875rem;
   font-weight: 500;
-  background: none;
-  border: none;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 
 .downloadAllButton:hover {
   color: #5c6ed5;
+  border-color: #5c6ed5;
 }
 
 /* Timeline */
