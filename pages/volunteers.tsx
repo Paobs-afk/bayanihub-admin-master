@@ -171,7 +171,7 @@ function ApplicationItem({
         </button>
         <button
           onClick={() => onApprove(volunteer.id)}
-          className={styles.actionButton}
+          className={`${styles.actionButton} ${styles.approve}`}
         >
           <svg className={styles.svg14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <polyline points="20 6 9 17 4 12" />
@@ -180,7 +180,7 @@ function ApplicationItem({
         </button>
         <button
           onClick={() => onReject(volunteer.id)}
-          className={styles.actionButton}
+          className={`${styles.actionButton} ${styles.reject}`}
         >
           <svg className={styles.svg14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <line x1="18" y1="6" x2="6" y2="18" />

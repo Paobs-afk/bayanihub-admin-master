@@ -198,37 +198,39 @@
   background-color: white;
   border: 1px solid #E5E5E5;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-bottom: 1rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   transition: box-shadow 0.2s;
 }
 
 .applicationItem:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .applicationContent {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.25rem;
   flex: 1;
   min-width: 0;
 }
 
 .applicationAvatar {
-  width: 3rem;
-  height: 3rem;
-  background: linear-gradient(to bottom right, rgba(92, 110, 213, 0.1), rgba(62, 90, 153, 0.1));
-  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(to bottom right, rgba(92, 110, 213, 0.15), rgba(62, 90, 153, 0.15));
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #5C6ED5;
 }
 
 .applicationInfo {
@@ -239,20 +241,21 @@
 .applicationName {
   color: #171717;
   font-weight: 600;
-  font-size: 0.875rem;
-  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
 }
 
 .applicationDescription {
   color: #737373;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   margin-bottom: 0.75rem;
+  line-height: 1.4;
 }
 
 .applicationMeta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
   font-size: 0.75rem;
   color: #737373;
 }
@@ -260,7 +263,7 @@
 .metaItem {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 
 .metaIcon {
@@ -272,62 +275,70 @@
 .applicationActions {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   flex-shrink: 0;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 768px) {
   .applicationActions {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
   }
 }
 
 .roleBadge {
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
   white-space: nowrap;
+  display: inline-block;
 }
 
 .roleBadgeMedic {
-  background-color: rgba(92, 110, 213, 0.1);
-  color: #5C6ED5;
+  background-color: #DBEAFE;
+  color: #1E40AF;
 }
 
 .roleBadgeLogistic {
-  background-color: rgba(62, 90, 153, 0.1);
-  color: #3E5A99;
+  background-color: #FEF3C7;
+  color: #92400E;
 }
 
 .roleBadgeField {
-  background-color: rgba(92, 110, 213, 0.05);
-  color: #5C6ED5;
+  background-color: #DCFCE7;
+  color: #166534;
 }
 
 .reviewButton {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   background-color: #5C6ED5;
   color: white;
   border-radius: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .reviewButton:hover {
   background-color: #3E5A99;
+  box-shadow: 0 2px 8px rgba(92, 110, 213, 0.2);
 }
 
 .actionButton {
-  padding: 0.5rem 1rem;
-  border: 1px solid #E5E5E5;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #E5E5E5;
   border-radius: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: #171717;
   background-color: white;
@@ -335,13 +346,34 @@
   white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  justify-content: center;
+  gap: 0.35rem;
   transition: all 0.2s;
 }
 
 .actionButton:hover {
-  background-color: #FAFAFA;
-  color: #5C6ED5;
+  border-color: #D1D5DB;
+  background-color: #F9FAFB;
+}
+
+.actionButton.approve {
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.actionButton.approve:hover {
+  background-color: #DCFCE7;
+  border-color: #22c55e;
+}
+
+.actionButton.reject {
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.actionButton.reject:hover {
+  background-color: #FEE2E2;
+  border-color: #ef4444;
 }
 
 /* Pagination */
