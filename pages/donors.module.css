@@ -18,18 +18,63 @@
   gap: 1.5rem;
 }
 
-.pageHeader {
+/* Donors Page Custom Header */
+.donorsHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
+  padding: 0 2rem;
+  height: 65px;
+  border-bottom: 1px solid #E5E5E5;
+  background: white;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
-  .pageHeader {
-    flex-direction: column;
+  .donorsHeader {
+    padding: 0 1rem;
+    height: auto;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
+}
+
+.brandingBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.brandIconBox {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  background-color: #5C6ED5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #171717;
+  letter-spacing: -0.03125em;
+  margin: 0;
+}
+
+.brandSub {
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #737373;
+  letter-spacing: -0.03125em;
+  margin: 0;
 }
 
 .backButton {

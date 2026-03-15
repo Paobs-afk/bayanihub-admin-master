@@ -1,8 +1,14 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./donors.module.css";
+
+const BayaniHubIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M5 3H14.5C16.4 3 18 4.6 18 6.5C18 7.7 17.4 8.8 16.4 9.5C17.7 10.2 18.5 11.5 18.5 13C18.5 15.2 16.7 17 14.5 17H5V3ZM8 8.5H14C14.8 8.5 15.5 7.8 15.5 7C15.5 6.2 14.8 5.5 14 5.5H8V8.5ZM8 14.5H14.5C15.3 14.5 16 13.8 16 13C16 12.2 15.3 11.5 14.5 11.5H8V14.5Z" fill="white"/>
+    <path d="M5 17V20H9C10.1 20 11 19.1 11 18C11 17.4 10.7 16.9 10.3 16.5C9.9 16.2 9.5 17 9 17H5Z" fill="white" opacity="0.7"/>
+  </svg>
+);
 
 // Mock donor data
 const MOCK_DONORS = [
@@ -95,22 +101,29 @@ export default function Donors() {
 
   return (
     <div className={styles.container}>
-      <Header />
-      <main className={styles.main}>
-        <div className={styles.pageHeader}>
-          <Link href="/" className={styles.backButton}>
-            <svg className={styles.svg16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Back
-          </Link>
-          <div className={styles.headerCenter}>
-            <h1 className={styles.headerTitle}>Donor Management</h1>
-            <p className={styles.headerSubtitle}>Manage and track donors in your system</p>
-          </div>
-          <div className={styles.headerSpacer} />
+      <header className={styles.donorsHeader}>
+        <Link href="/" className={styles.backButton}>
+          <svg className={styles.svg16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Back
+        </Link>
+        <div className={styles.headerCenter}>
+          <h1 className={styles.headerTitle}>Donor Management</h1>
+          <p className={styles.headerSubtitle}>Manage and track donors in your system</p>
         </div>
+        <div className={styles.brandingBlock}>
+          <div className={styles.brandIconBox}>
+            <BayaniHubIcon />
+          </div>
+          <div>
+            <p className={styles.brandName}>BayaniHub</p>
+            <p className={styles.brandSub}>Admin Panel</p>
+          </div>
+        </div>
+      </header>
 
+      <main className={styles.main}>
         <div className={styles.filtersSection}>
           <div className={styles.filtersContent}>
             <div className={styles.searchContainer}>
