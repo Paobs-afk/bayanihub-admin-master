@@ -222,13 +222,8 @@ export default function VolunteerVerification() {
             <h1 className={styles.pageTitle}>Volunteer Verification</h1>
             <p className={styles.pageSubtitle}>Check if users are registered volunteers in our system</p>
           </div>
-          <div style={{ display: "flex", gap: "0.5rem", flexDirection: "column", whiteSpace: "nowrap" }}>
-            <Link href="/volunteers" className={styles.backButton}>
-              ← Back to Applications
-            </Link>
-            <Link href="/" className={styles.backButton}>
-              ← Admin Dashboard
-            </Link>
+          <div className={styles.lastUpdated}>
+            Last updated: March 8, 2025
           </div>
         </div>
 
@@ -352,6 +347,17 @@ export default function VolunteerVerification() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Back Links */}
+        <div className={styles.linkContainer}>
+          <Link href="/volunteers" className={styles.link}>
+            Back to Volunteer Applications
+          </Link>
+          <span className={styles.divider}>•</span>
+          <Link href="/" className={styles.link}>
+            Back to Dashboard
+          </Link>
         </div>
       </main>
 
