@@ -271,7 +271,7 @@ export default function Volunteers() {
                 if (role === "All Applications") {
                   setSelectedRole(role);
                 } else {
-                  router.push(`/volunteers/${role}`);
+                  router.push(`/volunteers/${role.toLowerCase()}`);
                 }
                 setCurrentPage(1);
               }}
