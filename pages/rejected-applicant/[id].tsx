@@ -124,101 +124,101 @@ export default function RejectedApplicationReview() {
               </td>
             </tr>
             <tr>
-              <td className={styles.headerTableCell}></td>
+              <td className={styles.headerTableCellContent}>
+                {/* Alert Box */}
+                <div className={styles.alertBox}>
+                  <AlertTriangle className={styles.alertIcon} />
+                  <div className={styles.alertContent}>
+                    <p className={styles.alertTitle}>Application Rejected</p>
+                    <p className={styles.alertText}>
+                      This application has been rejected and the user will be notified via feedback message.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Application Details */}
+                <div className={styles.card}>
+                  <div className={styles.infoGrid}>
+                    <div className={styles.infoItem}>
+                      <p className={styles.infoLabel}>Application ID</p>
+                      <p className={styles.infoValue}>{application.applicationId}</p>
+                    </div>
+                    <div className={styles.infoItem}>
+                      <p className={styles.infoLabel}>Rejection Date</p>
+                      <p className={styles.infoValue}>{application.rejectionDate}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Applicant Information */}
+                <div className={styles.card}>
+                  <h2 className={styles.cardTitle}>Applicant Information</h2>
+                  <div className={styles.applicantInfo}>
+                    <div className={styles.applicantAvatar}>{application.avatar}</div>
+                    <div className={styles.applicantDetails}>
+                      <p className={styles.applicantName}>{application.name}</p>
+                      <p className={styles.applicantEmail}>{application.email}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Validation Status */}
+                <div className={styles.card}>
+                  <h2 className={styles.cardTitle}>Validation Status</h2>
+                  <div className={styles.validationGrid}>
+                    <div className={styles.validationItem}>
+                      <span className={styles.validationValue}>Valid?</span>
+                    </div>
+                    <div className={styles.validationItem}>
+                      <div className={styles.validationContent}>
+                        <span className={styles.validationValue}>Reject</span>
+                        <span className={styles.validationValue} style={{ fontSize: "0.75rem" }}>
+                          Notify User with FB (No)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rejection Reason */}
+                <div className={styles.card}>
+                  <h2 className={styles.cardTitle}>Rejection Reason</h2>
+                  <div className={styles.reasonSection}>
+                    <p className={styles.reasonText}>{application.rejectionReason}</p>
+                  </div>
+                </div>
+
+                {/* Feedback Message to User */}
+                <div className={styles.card}>
+                  <h2 className={styles.cardTitle}>Feedback Message to User</h2>
+                  <div className={styles.feedbackBox}>
+                    <p className={styles.feedbackText}>{application.feedbackMessage}</p>
+                  </div>
+                </div>
+
+                {/* Notification Status */}
+                <div className={styles.card}>
+                  <h2 className={styles.cardTitle}>Notification Status</h2>
+                  <div className={styles.notificationContent}>
+                    <svg
+                      className={styles.notificationIcon}
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    <div className={styles.notificationDetails}>
+                      <p className={styles.notificationMessage}>
+                        User has been notified via {application.notificationStatus.method}
+                      </p>
+                      <p className={styles.notificationTime}>{application.notificationStatus.timestamp}</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
-
-        {/* Alert Box */}
-        <div className={styles.alertBox}>
-          <AlertTriangle className={styles.alertIcon} />
-          <div className={styles.alertContent}>
-            <p className={styles.alertTitle}>Application Rejected</p>
-            <p className={styles.alertText}>
-              This application has been rejected and the user will be notified via feedback message.
-            </p>
-          </div>
-        </div>
-
-        {/* Application Details */}
-        <div className={styles.card}>
-          <div className={styles.infoGrid}>
-            <div className={styles.infoItem}>
-              <p className={styles.infoLabel}>Application ID</p>
-              <p className={styles.infoValue}>{application.applicationId}</p>
-            </div>
-            <div className={styles.infoItem}>
-              <p className={styles.infoLabel}>Rejection Date</p>
-              <p className={styles.infoValue}>{application.rejectionDate}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Applicant Information */}
-        <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Applicant Information</h2>
-          <div className={styles.applicantInfo}>
-            <div className={styles.applicantAvatar}>{application.avatar}</div>
-            <div className={styles.applicantDetails}>
-              <p className={styles.applicantName}>{application.name}</p>
-              <p className={styles.applicantEmail}>{application.email}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Validation Status */}
-        <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Validation Status</h2>
-          <div className={styles.validationGrid}>
-            <div className={styles.validationItem}>
-              <span className={styles.validationValue}>Valid?</span>
-            </div>
-            <div className={styles.validationItem}>
-              <div className={styles.validationContent}>
-                <span className={styles.validationValue}>Reject</span>
-                <span className={styles.validationValue} style={{ fontSize: "0.75rem" }}>
-                  Notify User with FB (No)
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Rejection Reason */}
-        <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Rejection Reason</h2>
-          <div className={styles.reasonSection}>
-            <p className={styles.reasonText}>{application.rejectionReason}</p>
-          </div>
-        </div>
-
-        {/* Feedback Message to User */}
-        <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Feedback Message to User</h2>
-          <div className={styles.feedbackBox}>
-            <p className={styles.feedbackText}>{application.feedbackMessage}</p>
-          </div>
-        </div>
-
-        {/* Notification Status */}
-        <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Notification Status</h2>
-          <div className={styles.notificationContent}>
-            <svg
-              className={styles.notificationIcon}
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <div className={styles.notificationDetails}>
-              <p className={styles.notificationMessage}>
-                User has been notified via {application.notificationStatus.method}
-              </p>
-              <p className={styles.notificationTime}>{application.notificationStatus.timestamp}</p>
-            </div>
-          </div>
-        </div>
 
         {/* Action Buttons */}
         <div className={styles.actionButtons}>
