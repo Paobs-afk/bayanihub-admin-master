@@ -3,11 +3,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./index.module.css";
 
-function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
+function StatCard({ imageUrl, label, value }: { imageUrl: string; label: string; value: string }) {
   return (
     <div className={styles.statCard}>
       <div className={styles.statCardTop}>
-        <div className={styles.statIcon}>{icon}</div>
+        <img src={imageUrl} alt={label} className={styles.statIcon} />
         <span className={styles.statLabel}>Total</span>
       </div>
       <p className={styles.statValue}>{value}</p>
@@ -69,9 +69,9 @@ export default function Index() {
         </section>
 
         <section className={styles.statsSection}>
-          <StatCard value="1,247" label="Active Donors" icon={<svg width="25" height="20" viewBox="0 0 25 20" fill="none"><path d="M5.625 0C6.4538 0 7.24866 0.32924 7.83471 0.915291C8.42076 1.50134 8.75 2.2962 8.75 3.125C8.75 3.9538 8.42076 4.74866 7.83471 5.33471C7.24866 5.92076 6.4538 6.25 5.625 6.25C4.7962 6.25 4.00134 5.92076 3.41529 5.33471C2.82924 4.74866 2.5 3.9538 2.5 3.125C2.5 2.2962 2.82924 1.50134 3.41529 0.915291C4.00134 0.32924 4.7962 0 5.625 0ZM20 0C20.8288 0 21.6237 0.32924 22.2097 0.915291C22.7958 1.50134 23.125 2.2962 23.125 3.125C23.125 3.9538 22.7958 4.74866 22.2097 5.33471C21.6237 5.92076 20.8288 6.25 20 6.25C19.1712 6.25 18.3763 5.92076 17.7903 5.33471C17.2042 4.74866 16.875 3.9538 16.875 3.125C16.875 2.2962 17.2042 1.50134 17.7903 0.915291C18.3763 0.32924 19.1712 0 20 0ZM0 11.668C0 9.36719 1.86719 7.5 4.16797 7.5H5.83594C6.45703 7.5 7.04688 7.63672 7.57812 7.87891C7.52734 8.16016 7.50391 8.45312 7.50391 8.75C7.50391 10.2422 8.16016 11.582 9.19531 12.5C9.1875 12.5 9.17969 12.5 9.16797 12.5H0.832031C0.375 12.5 0 12.125 0 11.668Z" fill="white" /></svg>} />
-          <StatCard value="892" label="Volunteers" icon={<svg width="25" height="20" viewBox="0 0 25 20" fill="none"><path d="M4.5 6C4.5 4.4087 5.13214 2.88258 6.25736 1.75736C7.38258 0.632141 8.9087 0 10.5 0C12.0913 0 13.6174 0.632141 14.7426 1.75736C15.8679 2.88258 16.5 4.4087 16.5 6C16.5 7.5913 15.8679 9.11742 14.7426 10.2426C13.6174 11.3679 12.0913 12 10.5 12C8.9087 12 7.38258 11.3679 6.25736 10.2426C5.13214 9.11742 4.5 7.5913 4.5 6Z" fill="white" /></svg>} />
-          <StatCard value="3,456" label="Inventory Items" icon={<svg width="23" height="20" viewBox="0 0 23 20" fill="none"><path d="M9.6875 0H8.125C7.08984 0 6.25 0.839844 6.25 1.875V6.25C6.25 7.62891 7.37109 8.75 8.75 8.75H13.75C15.1289 8.75 16.25 7.62891 16.25 6.25V1.875C16.25 0.839844 15.4102 0 14.375 0H12.8125V3.125C12.8125 3.46875 12.5312 3.75 12.1875 3.75H10.3125C9.96875 3.75 9.6875 3.46875 9.6875 3.125V0Z" fill="white" /></svg>} />
+          <StatCard value="1,247" label="Active Donors" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F55bd7150219642ff8bb81d921808f1c2?format=webp&width=800&height=1200" />
+          <StatCard value="892" label="Volunteers" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Fb42539e66ff54d7db512691eb9b913df?format=webp&width=800&height=1200" />
+          <StatCard value="3,456" label="Inventory Items" imageUrl="https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F809749859f344fd6a82f775181af31de?format=webp&width=800&height=1200" />
         </section>
 
         <section className={styles.quickAccessSection}>
