@@ -308,7 +308,7 @@ export default function Volunteers() {
                   volunteer={volunteer}
                   onReview={(id) => navigate(`/applicant/${id}`)}
                   onApprove={() => navigate("/approval-status")}
-                  onReject={(id) => console.log("Reject clicked for volunteer:", id)}
+                  onReject={() => navigate("/rejection-status")}
                 />
               ))}
             </>

@@ -143,7 +143,10 @@ export default function ApplicantDetail() {
               >
                 Approve
               </button>
-              <button className="px-4 py-2 border border-[#E5E5E5] rounded-lg text-sm font-medium text-[#171717] hover:bg-[#FAFAFA] hover:text-[#5C6ED5] transition-colors whitespace-nowrap">
+              <button
+                onClick={() => navigate("/rejection-status")}
+                className="px-4 py-2 border border-[#E5E5E5] rounded-lg text-sm font-medium text-[#171717] hover:bg-[#FAFAFA] hover:text-[#5C6ED5] transition-colors whitespace-nowrap"
+              >
                 Reject
               </button>
             </div>
