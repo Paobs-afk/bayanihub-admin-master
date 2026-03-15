@@ -82,7 +82,7 @@
   border-radius: 0.75rem;
   border: 1px solid #E5E5E5;
   background-color: white;
-  padding: 1.5625rem;
+  padding: 1.5625rem 1.5625rem 0.75rem 1.5625rem;
   transition: box-shadow 0.2s;
 }
 
