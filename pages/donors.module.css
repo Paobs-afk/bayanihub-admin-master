@@ -289,6 +289,9 @@
   font-size: 0.75rem;
   text-decoration: none;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .donorPhone:hover {
