@@ -87,6 +87,17 @@
   margin-bottom: 1.5rem;
 }
 
+.statIconBox {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: #5C6ED5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .statIcon {
   width: 3rem;
   height: 3rem;
@@ -170,6 +181,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #5C6ED5;
 }
 
 .quickCardIconBox img {
