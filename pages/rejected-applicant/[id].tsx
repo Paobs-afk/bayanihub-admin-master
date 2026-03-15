@@ -155,13 +155,16 @@ export default function RejectedApplicationReview() {
               <p className={styles.applicantEmail}>{application.email}</p>
             </div>
           </div>
+        </div>
 
-          {/* Validation Status */}
+        {/* Validation Status */}
+        <div className={styles.card}>
+          <h2 className={styles.cardTitle}>Validation Status</h2>
           <div className={styles.validationGrid}>
             <div className={styles.validationItem}>
-              <p className={styles.validationLabel}>Validation Status</p>
+              <p className={styles.validationLabel}>Valid?</p>
               <div className={styles.validationContent}>
-                <span className={styles.validationValue}>{application.validationStatus}?</span>
+                <span className={styles.validationValue}>{application.validationStatus}</span>
               </div>
             </div>
             <div className={styles.validationItem}>
