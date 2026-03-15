@@ -26,11 +26,9 @@ export default function Header() {
           <div className={styles.divider} />
 
           <div className={styles.userInfo}>
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/7408d15ef591d89c237f15c0db423cd28cba764f?width=72"
-              alt="Admin"
-              className={styles.userAvatar}
-            />
+            <div className={styles.userAvatar}>
+              A
+            </div>
             <div className={styles.userDetails}>
               <p className={styles.userName}>Admin</p>
               <p className={styles.userRole}>Administrator</p>
