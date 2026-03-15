@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./donors.module.css";
 
@@ -101,6 +102,7 @@ export default function Donors() {
 
   return (
     <div className={styles.container}>
+      <Header />
       <header className={styles.donorsHeader}>
         <Link href="/" className={styles.backButton}>
           <svg className={styles.svg16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
