@@ -5,17 +5,17 @@ import Footer from "@/components/Footer";
 import styles from "./inventory.module.css";
 
 const MOCK_INVENTORY = [
-  { id: 1, name: "Canned Food Items", description: "Non-perishable goods", site: "Downtown Center", location: "Main Warehouse", date: "Jan 15, 2025", time: "2:30 PM", quantity: 150, unit: "units", category: "Food", status: "Available", icon: "🥫" },
-  { id: 2, name: "Winter Clothing", description: "Coats, jackets, sweaters", site: "North Branch", location: "Storage Room B", date: "Jan 14, 2025", time: "10:15 AM", quantity: 75, unit: "items", category: "Clothing", status: "Reserved", icon: "🧥" },
-  { id: 3, name: "Medical Supplies", description: "First aid kits, bandages", site: "South Branch", location: "Medical Storage", date: "Jan 13, 2025", time: "4:45 PM", quantity: 25, unit: "kits", category: "Medical", status: "Available", icon: "🏥" },
-  { id: 4, name: "Blankets & Bedding", description: "Thermal blankets, sheets", site: "East Campus", location: "Warehouse A", date: "Jan 12, 2025", time: "9:20 AM", quantity: 120, unit: "sets", category: "Bedding", status: "Available", icon: "🛏️" },
-  { id: 5, name: "Hygiene Kits", description: "Toiletries and personal care", site: "West Center", location: "Storage Room C", date: "Jan 11, 2025", time: "3:15 PM", quantity: 200, unit: "kits", category: "Hygiene", status: "Distributed", icon: "🧼" },
-  { id: 6, name: "Baby Supplies", description: "Diapers, formula, wipes", site: "Downtown Center", location: "Main Warehouse", date: "Jan 10, 2025", time: "11:30 AM", quantity: 85, unit: "packs", category: "Baby", status: "Available", icon: "👶" },
-  { id: 7, name: "Drinking Water", description: "Bottled water bottles", site: "North Branch", location: "Inventory Room", date: "Jan 09, 2025", time: "1:45 PM", quantity: 500, unit: "bottles", category: "Beverages", status: "Reserved", icon: "💧" },
-  { id: 8, name: "First Aid Kits", description: "Complete emergency first aid", site: "South Branch", location: "Medical Storage", date: "Jan 08, 2025", time: "2:00 PM", quantity: 40, unit: "boxes", category: "Medical", status: "Available", icon: "🏥" },
+  { id: 1, name: "Canned Food Items", description: "Non-perishable goods", site: "Field Office NCR", location: "Main Warehouse", date: "Jan 15, 2025", time: "2:30 PM", quantity: 150, unit: "units", category: "Food", status: "Available", icon: "🥫" },
+  { id: 2, name: "Winter Clothing", description: "Coats, jackets, sweaters", site: "Field Office CAR", location: "Storage Room B", date: "Jan 14, 2025", time: "10:15 AM", quantity: 75, unit: "items", category: "Clothing", status: "Reserved", icon: "🧥" },
+  { id: 3, name: "Medical Supplies", description: "First aid kits, bandages", site: "Field Office I", location: "Medical Storage", date: "Jan 13, 2025", time: "4:45 PM", quantity: 25, unit: "kits", category: "Medical", status: "Available", icon: "🏥" },
+  { id: 4, name: "Blankets & Bedding", description: "Thermal blankets, sheets", site: "Field Office II", location: "Warehouse A", date: "Jan 12, 2025", time: "9:20 AM", quantity: 120, unit: "sets", category: "Bedding", status: "Available", icon: "🛏️" },
+  { id: 5, name: "Hygiene Kits", description: "Toiletries and personal care", site: "Field Office III", location: "Storage Room C", date: "Jan 11, 2025", time: "3:15 PM", quantity: 200, unit: "kits", category: "Hygiene", status: "Distributed", icon: "🧼" },
+  { id: 6, name: "Baby Supplies", description: "Diapers, formula, wipes", site: "Field Office NCR", location: "Main Warehouse", date: "Jan 10, 2025", time: "11:30 AM", quantity: 85, unit: "packs", category: "Baby", status: "Available", icon: "👶" },
+  { id: 7, name: "Drinking Water", description: "Bottled water bottles", site: "Field Office CAR", location: "Inventory Room", date: "Jan 09, 2025", time: "1:45 PM", quantity: 500, unit: "bottles", category: "Beverages", status: "Reserved", icon: "💧" },
+  { id: 8, name: "First Aid Kits", description: "Complete emergency first aid", site: "Field Office I", location: "Medical Storage", date: "Jan 08, 2025", time: "2:00 PM", quantity: 40, unit: "boxes", category: "Medical", status: "Available", icon: "🏥" },
 ];
 
-const SITES = ["All Sites", "Downtown Center", "North Branch", "South Branch", "East Campus", "West Center"];
+const SITES = ["All Sites", "Field Office NCR", "Field Office CAR", "Field Office I", "Field Office II", "Field Office III"];
 const CATEGORIES = ["All Categories", "Food", "Clothing", "Medical", "Bedding", "Hygiene", "Baby", "Beverages"];
 const STATUSES = ["All Status", "Available", "Reserved", "Distributed"];
 
