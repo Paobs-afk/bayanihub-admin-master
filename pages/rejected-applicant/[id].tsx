@@ -162,13 +162,9 @@ export default function RejectedApplicationReview() {
           <h2 className={styles.cardTitle}>Validation Status</h2>
           <div className={styles.validationGrid}>
             <div className={styles.validationItem}>
-              <p className={styles.validationLabel}>Valid?</p>
-              <div className={styles.validationContent}>
-                <span className={styles.validationValue}>{application.validationStatus}</span>
-              </div>
+              <span className={styles.validationValue}>Valid?</span>
             </div>
             <div className={styles.validationItem}>
-              <p className={styles.validationLabel}>Action</p>
               <div className={styles.validationContent}>
                 <span className={styles.validationValue}>Reject</span>
                 <span className={styles.validationValue} style={{ fontSize: "0.75rem" }}>
