@@ -3,17 +3,18 @@
   display: flex;
   flex-direction: column;
   background-color: #fafafa;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .mainContent {
   flex: 1;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
   padding: 2rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -113,16 +114,19 @@
 .searchInputWrapper {
   position: relative;
   margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .searchInput {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
   border: 1px solid #e5e5e5;
   border-radius: 0.5rem;
   font-size: 0.875rem;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .searchInput:focus {
@@ -139,6 +143,7 @@
   height: 1rem;
   color: #737373;
   pointer-events: none;
+  flex-shrink: 0;
 }
 
 /* Button Styles */

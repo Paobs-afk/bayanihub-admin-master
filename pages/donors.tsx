@@ -147,16 +147,18 @@ export default function Donors() {
                   </svg>
                   Add Donor
                 </button>
-                <div className={styles.viewIconsGroup}>
-                  <button className={styles.actionButton}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
-                      <path d="M3 13a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2z" />
+                <div className={styles.viewToggleGroup}>
+                  <span className={styles.viewLabel}>View:</span>
+                  <button className={styles.viewButtonActive}>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 16H0V0H16V16Z" stroke="#E5E7EB"/>
+                      <path d="M14 3V7H9V3H14ZM14 9V13H9V9H14ZM7 7H2V3H7V7ZM2 9H7V13H2V9ZM2 1C0.896875 1 0 1.89688 0 3V13C0 14.1031 0.896875 15 2 15H14C15.1031 15 16 14.1031 16 13V3C16 1.89688 15.1031 1 14 1H2Z" fill="#5A67D8"/>
                     </svg>
                   </button>
-                  <button className={styles.actionButton}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+                  <button className={styles.viewButtonInactive}>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 16H0V0H16V16Z" stroke="#E5E7EB"/>
+                      <path d="M1.25 1.5C0.834375 1.5 0.5 1.83437 0.5 2.25V3.75C0.5 4.16563 0.834375 4.5 1.25 4.5H2.75C3.16563 4.5 3.5 4.16563 3.5 3.75V2.25C3.5 1.83437 3.16563 1.5 2.75 1.5H1.25ZM6 2C5.44688 2 5 2.44687 5 3C5 3.55312 5.44688 4 6 4H15C15.5531 4 16 3.55312 16 3C16 2.44687 15.5531 2 15 2H6ZM6 7C5.44688 7 5 7.44688 5 8C5 8.55312 5.44688 9 6 9H15C15.5531 9 16 8.55312 16 8C16 7.44688 15.5531 7 15 7H6ZM6 12C5.44688 12 5 12.4469 5 13C5 13.5531 5.44688 14 6 14H15C15.5531 14 16 13.5531 16 13C16 12.4469 15.5531 12 15 12H6ZM0.5 7.25V8.75C0.5 9.16563 0.834375 9.5 1.25 9.5H2.75C3.16563 9.5 3.5 9.16563 3.5 8.75V7.25C3.5 6.83437 3.16563 6.5 2.75 6.5H1.25C0.834375 6.5 0.5 6.83437 0.5 7.25ZM1.25 11.5C0.834375 11.5 0.5 11.8344 0.5 12.25V13.75C0.5 14.1656 0.834375 14.5 1.25 14.5H2.75C3.16563 14.5 3.5 14.1656 3.5 13.75V12.25C3.5 11.8344 3.16563 11.5 2.75 11.5H1.25Z" fill="#9CA3AF"/>
                     </svg>
                   </button>
                 </div>
