@@ -282,14 +282,61 @@
   border-color: #3E5A99;
 }
 
-.viewIconsGroup {
-  display: flex;
-  gap: 0.25rem;
-  border: 1px solid #E5E5E5;
-  border-radius: 0.5rem;
-  padding: 0.25rem;
+.viewToggleGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  height: 40px;
   flex-shrink: 0;
+}
+
+.viewLabel {
+  color: #4B5563;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.03125em;
   white-space: nowrap;
+}
+
+.viewButtonActive {
+  display: flex;
+  width: 32px;
+  height: 40px;
+  padding: 10px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background: #FEF2F2;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.viewButtonActive:hover {
+  background: #fee2e2;
+}
+
+.viewButtonInactive {
+  display: flex;
+  width: 32px;
+  height: 40px;
+  padding: 10px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.viewButtonInactive:hover {
+  background: #F9FAFB;
 }
 
 /* Donor Cards Grid */
