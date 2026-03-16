@@ -10,6 +10,7 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -42,8 +43,6 @@
 
 .container {
   width: 100%;
-  max-width: 2100px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,13 +79,7 @@
   font-weight: 400;
   letter-spacing: -0.016em;
   line-height: 1.75rem;
-  display: none;
-}
-
-@media (min-width: 640px) {
-  .logoText {
-    display: inline-block;
-  }
+  display: inline-block;
 }
 
 .rightContent {
@@ -146,13 +139,7 @@
 }
 
 .userDetails {
-  display: none;
-}
-
-@media (min-width: 640px) {
-  .userDetails {
-    display: block;
-  }
+  display: block;
 }
 
 .userName {
