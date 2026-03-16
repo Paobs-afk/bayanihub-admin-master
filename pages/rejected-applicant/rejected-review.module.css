@@ -245,11 +245,15 @@
   color: #171717;
   font-weight: 600;
   font-size: 0.95rem;
+  margin: 0;
+  line-height: 1;
 }
 
 .applicantEmail {
   color: #737373;
   font-size: 0.85rem;
+  margin: 0;
+  line-height: 1;
 }
 
 /* Validation Status */
