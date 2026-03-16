@@ -8,17 +8,18 @@ import styles from "./rejected-review.module.css";
 const REJECTED_APPLICATIONS_DATABASE: { [key: string]: any } = {
   "2": {
     id: 2,
-    name: "John Smith",
-    email: "john.smith@email.com",
+    name: "Michael Chen",
+    email: "m.chen@email.com",
     phone: "+1 (555) 987-6543",
     role: "Logistic",
-    avatar: "👨‍💼",
+    gender: "male",
+    avatar: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2F5b17614135f047edaec8a0a56e56e95c?format=webp&width=800&height=1200",
     applicationId: "#APP-2025-0342",
     rejectionDate: "March 8, 2025",
     validationStatus: "Valid",
     rejectionReason:
       "Application does not meet the minimum requirements. Missing required documentation and incomplete information provided.",
-    feedbackMessage: `Dear John Smith,
+    feedbackMessage: `Dear Michael Chen,
 
 Thank you for your application. Unfortunately, we cannot proceed with your application at this time due to incomplete documentation. Please review the requirements and resubmit with all necessary materials.
 
@@ -36,7 +37,8 @@ Application Review Team`,
     email: "lthompson@email.com",
     phone: "+1 (555) 345-6789",
     role: "Logistic",
-    avatar: "📦",
+    gender: "female",
+    avatar: "https://cdn.builder.io/api/v1/image/assets%2F895651d642164b74988a81b4e99696fb%2Ff9735712ac9445bfa5fc8e23bf5556e0?format=webp&width=800&height=1200",
     applicationId: "#APP-2025-0245",
     rejectionDate: "March 5, 2025",
     validationStatus: "Valid",
@@ -154,7 +156,12 @@ export default function RejectedApplicationReview() {
                 <div className={styles.card}>
                   <h2 className={styles.cardTitle}>Applicant Information</h2>
                   <div className={styles.applicantInfo}>
-                    <div className={styles.applicantAvatar}>{application.avatar}</div>
+                    <img
+                      src={application.avatar}
+                      alt={application.name}
+                      className={styles.applicantAvatar}
+                      style={{ objectFit: "contain" }}
+                    />
                     <div className={styles.applicantDetails}>
                       <p className={styles.applicantName}>{application.name}</p>
                       <p className={styles.applicantEmail}>{application.email}</p>

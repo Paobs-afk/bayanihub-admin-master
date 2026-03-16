@@ -226,30 +226,30 @@
 .applicantAvatar {
   width: 2.5rem;
   height: 2.5rem;
-  background: linear-gradient(to bottom right, rgba(92, 110, 213, 0.15), rgba(62, 90, 153, 0.15));
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  font-size: 1.25rem;
+  object-fit: cover;
 }
 
 .applicantDetails {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0;
 }
 
 .applicantName {
   color: #171717;
   font-weight: 600;
   font-size: 0.95rem;
+  margin: 0;
+  line-height: 1;
 }
 
 .applicantEmail {
   color: #737373;
   font-size: 0.85rem;
+  margin: 0;
+  line-height: 1;
 }
 
 /* Validation Status */
