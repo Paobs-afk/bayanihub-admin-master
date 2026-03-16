@@ -82,6 +82,8 @@
   padding: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .filtersSection:hover {
@@ -90,11 +92,24 @@
 
 .filtersGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1rem;
+  align-items: flex-end;
+}
+
+@media (min-width: 640px) {
+  .filtersGrid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
 }
 
 @media (min-width: 1024px) {
+  .filtersGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
   .filtersGrid {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -104,6 +119,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .filterLabel {
@@ -124,6 +141,7 @@
   background-color: white;
   cursor: pointer;
   transition: all 0.2s;
+  box-sizing: border-box;
 }
 
 .filterSelect:focus,
@@ -136,8 +154,10 @@
 .filterButtonsGroup {
   display: flex;
   gap: 0.5rem;
-  justify-self: end;
-  align-self: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .filterButton {
@@ -153,6 +173,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .filterButton:hover {
@@ -164,6 +186,8 @@
   background-color: #5C6ED5;
   color: white;
   border-color: #5C6ED5;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .filterButtonPrimary:hover {
