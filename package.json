@@ -10,7 +10,7 @@
     ]
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
     "test": "jest --run",
