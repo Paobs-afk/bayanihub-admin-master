@@ -5,17 +5,18 @@
   display: flex;
   flex-direction: column;
   background-color: #FAFAFA;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .main {
   flex: 1;
   width: 100%;
-  max-width: 1900px;
-  margin: 0 auto;
   padding: 2rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  box-sizing: border-box;
 }
 
 /* Donors Page Custom Header */
