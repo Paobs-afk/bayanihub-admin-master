@@ -8,8 +8,8 @@ import styles from "./rejected-review.module.css";
 const REJECTED_APPLICATIONS_DATABASE: { [key: string]: any } = {
   "2": {
     id: 2,
-    name: "John Smith",
-    email: "john.smith@email.com",
+    name: "Michael Chen",
+    email: "m.chen@email.com",
     phone: "+1 (555) 987-6543",
     role: "Logistic",
     avatar: "👨‍💼",
@@ -18,7 +18,7 @@ const REJECTED_APPLICATIONS_DATABASE: { [key: string]: any } = {
     validationStatus: "Valid",
     rejectionReason:
       "Application does not meet the minimum requirements. Missing required documentation and incomplete information provided.",
-    feedbackMessage: `Dear John Smith,
+    feedbackMessage: `Dear Michael Chen,
 
 Thank you for your application. Unfortunately, we cannot proceed with your application at this time due to incomplete documentation. Please review the requirements and resubmit with all necessary materials.
 
